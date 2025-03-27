@@ -4,7 +4,6 @@ import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:zad_almuslem/core/app_colors/app_colors.dart';
 import 'package:zad_almuslem/core/translations/translation.dart';
-import 'package:zad_almuslem/featuers/auth/application/auth_state_provider.dart';
 import 'package:zad_almuslem/featuers/auth/presentation/controllers/auth_controller.dart';
 import 'package:zad_almuslem/shear/widget/text_form_filde_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

@@ -8,7 +8,7 @@ part 'auth_controller.g.dart';
 
 // Provider لحالة التحميل
 final isLoadingProvider = StateProvider<bool>((ref) => false);
-
+  
 // Provider لأخطاء البريد الإلكتروني وكلمة المرور
 final emailErrorProvider = StateProvider<String?>((ref) => null);
 final passwordErrorProvider = StateProvider<String?>((ref) => null);
