@@ -6,7 +6,7 @@ import 'package:zad_almuslem/core/translations/translation.dart';
 
 
 class CardProphetsDua extends StatelessWidget {
-  CardProphetsDua({super.key});
+  const CardProphetsDua({super.key});
 
   @override
   Widget build(BuildContext context) {

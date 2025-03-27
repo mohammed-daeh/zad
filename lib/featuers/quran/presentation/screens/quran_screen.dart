@@ -8,7 +8,6 @@ import 'package:zad_almuslem/featuers/quran/presentation/widget/card_player.dart
 
 class QuranScreen extends StatelessWidget {
  const QuranScreen({super.key});
-  // final CardPlayController isPlayer = Get.put(CardPlayController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,11 +44,9 @@ class QuranScreen extends StatelessWidget {
           Positioned(
             right: 16,
             left: 16,
-            // top: 0,
             bottom: 80,
             child:
               Visibility(
-                // visible: isPlayer.isPlaying.value,
                 child: CardPlayer(),
               )
           

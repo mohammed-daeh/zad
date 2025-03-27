@@ -31,11 +31,33 @@ dependencies:
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
 
+  adhan: ^2.0.0+1
+  awesome_notifications: ^0.10.0
+
+  reactive_forms: ^17.0.1
+  dio: ^5.8.0+1
+
+  flutter_switch:
+
   firebase_core: ^3.12.1
   cloud_firestore: ^5.6.3
   firebase_auth: ^5.5.1
-  # google_sign_in: ^6.3.0
+  firebase_messaging: ^15.2.3
+  googleapis_auth: ^1.6.0
+  flutter_qiblah: ^3.1.0+1
 
+
+  # google_sign_in: ^6.3.0
+  geolocator: ^13.0.2
+  geocoding: ^3.0.0
+  hijri: ^3.0.0
+  # flutter_compass: 
+  permission_handler: ^11.4.0
+
+
+
+
+  # intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
@@ -85,19 +107,19 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
-# icons_launcher:
-#   image_path: "assets/logo/logo.png" 
-#   platforms:
-#     android:
-#       enable: true
-#     ios:
-#       enable: true
-#     web:
-#       enable: true
-#       favicon_path: "assets/logo/logo.png"
-#     windows:
-#       enable: true
-#     macos:
-#       enable: true
-#     linux:
-#       enable: true
+icons_launcher:
+  image_path: "assets/logo/logo.png" 
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
+    web:
+      enable: true
+      favicon_path: "assets/logo/logo.png"
+    windows:
+      enable: true
+    macos:
+      enable: true
+    linux:
+      enable: true

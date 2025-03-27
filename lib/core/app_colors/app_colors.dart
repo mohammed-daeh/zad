@@ -6,6 +6,13 @@ class AppColors {
   static const Color yallowLight = Color(0xFFFBD9A1);
   static const Color greyHintForm = Color(0xFFCCCCCC);
   static const Color white = Color(0xFFFFFFFF);
+  static const Color textPrimary = Colors.white; 
+  static const Color textSecondary = Color(0xFFE0E0E0); 
+  static const Color iconBackground = Color(0xFF66BB6A);
+  static const Color iconColor = Colors.white; 
+  static const Color cardBackground1 = Color(0xFF66BB6A); 
+  static const Color cardBackground2 = Color(0xFF43A047); 
+  static const Color zompp = Color(0xFF388E3C); 
 
   static const Color black = Color(0xFF000000);
   static const Color transparent = Color(0x00000000);
@@ -19,6 +26,7 @@ class AppColors {
   static const Color zomp = Color(0xFF36A690);
   static const Color red = Color(0xFFF44336);
 }
+
 final LinearGradient myLinearGradient = LinearGradient(
   colors: [
     Color(0xFF296A88),

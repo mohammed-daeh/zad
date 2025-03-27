@@ -26,7 +26,6 @@ class TextFieldSearchQuran extends StatelessWidget {
               fontSize: 14,
               fontWeight: FontWeight.w400,
               color: Color(0xffAFACB2)),
-          // color: Color.fromRGBO(121, 116, 126, 1)),
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: Color(0xffECEBE3)),
           ),

@@ -1,10 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BottomNavController extends StateNotifier<int> {
-  BottomNavController() : super(0); // القيمة الافتراضية 
+  BottomNavController() : super(0); 
 
   void changeTabIndex(int index) {
-    state = index; // تحديث الـ state مباشرة ليعمل مع Riverpod
+    state = index; 
   }
 }
 

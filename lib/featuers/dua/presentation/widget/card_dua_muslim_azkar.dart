@@ -6,7 +6,7 @@ import 'package:zad_almuslem/core/translations/translation.dart';
 
 
 class CardMuslimAzkar extends StatelessWidget {
-  CardMuslimAzkar({super.key});
+  const CardMuslimAzkar({super.key});
  
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class CardMuslimAzkar extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'maxValue', // عرض القيم
+                      'maxValue', 
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
@@ -62,9 +62,7 @@ class CardMuslimAzkar extends StatelessWidget {
                 ),
               ),
             ),
-            // Positioned(
 
-            // )
           ],
        
     );

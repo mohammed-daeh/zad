@@ -7,7 +7,6 @@ class CardPlayer extends StatelessWidget {
   CardPlayer({super.key});
   String sura = 'Al-Fatihah';
   String pageNumper = '1';
-  // final CardPlayController isPlayer = Get.put(CardPlayController());
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +98,6 @@ class CardPlayer extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                // isPlayer.toggleVisibility();
               },
               child: SvgPicture.asset(
                 'assets/images/quranPage/exite.svg',

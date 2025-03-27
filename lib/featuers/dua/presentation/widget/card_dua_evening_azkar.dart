@@ -1,14 +1,18 @@
-// ignore_for_file: must_be_immutable, prefer_const_constructors
+// ignore_for_file: must_be_immutable, prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:zad_almuslem/core/translations/translation.dart';
+import 'package:zad_almuslem/featuers/dua/presentation/controllers/evening_azkar_state.dart';
 
-class CardEveningAzkar extends StatelessWidget {
-  CardEveningAzkar({super.key});
+class CardEveningAzkar extends ConsumerWidget {
+  const CardEveningAzkar({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(eveningAzkarControllerProvider);
+
     return Stack(
       children: [
         Positioned.fill(
@@ -31,9 +35,6 @@ class CardEveningAzkar extends StatelessWidget {
           ),
         ),
         Container(
-          // width: 163,
-          // height: 143,
-
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -55,7 +56,7 @@ class CardEveningAzkar extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'maxValu', // عرض القيم
+                  '${state.currentDuaIndex + 1} / ${state.totalDuas}',
                   style: const TextStyle(
                     fontSize: 14,
                     color: Color(0xff062437),
@@ -67,7 +68,7 @@ class CardEveningAzkar extends StatelessWidget {
                   width: 131,
                   child: LinearProgressIndicator(
                     borderRadius: BorderRadius.circular(10),
-                    value: 15,
+                    value: state.progress,
                     backgroundColor: const Color(0xffFFF2E5),
                     valueColor:
                         const AlwaysStoppedAnimation<Color>(Color(0xffDEA56E)),

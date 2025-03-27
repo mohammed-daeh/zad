@@ -17,12 +17,10 @@ class CardQuranSura extends StatelessWidget {
       required this.versesNumber,
       required this.suraType,
       required this.pathOfNameSura});
-  // CardPlayController isPlayer = Get.put(CardPlayController());
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // isPlayer.toggleVisibility();
       },
       child: Container(
         height: 82,

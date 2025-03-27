@@ -1,3 +1,4 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zad_almuslem/core/app_colors/app_colors.dart';
 import 'package:zad_almuslem/core/routers/router.dart';
 import 'package:zad_almuslem/core/translations/translation.dart';
+import 'package:zad_almuslem/featuers/home/presentation/controllers/location_provider.dart';
 import 'package:zad_almuslem/firebase_options.dart';
 
 void main() async {
@@ -15,17 +17,41 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   SharedPreferencesAsync prefs = SharedPreferencesAsync();
-//---------------------------------------------------
-  // final themeStr =
-  //     await rootBundle.loadString("assets/themes/light_theme.json");
-  // final themeJson = jsonDecode(themeStr);
-  // final theme = ThemeDecoder.decodeThemeData(themeJson)!;
-  // //-----------------//
-  // final darkThemeStr =
-  //     await rootBundle.loadString("assets/themes/dark_theme.json");
-  // final darkThemeJson = jsonDecode(darkThemeStr);
-  // final darkTtheme = ThemeDecoder.decodeThemeData(darkThemeJson)!;
-//*************************************************************************** */
+
+  // إعداد AwesomeNotifications
+  await AwesomeNotifications().initialize(
+    'resource://mipmap/ic_launcher',
+    [
+      NotificationChannel(
+        channelKey: 'prayer_channel_adhan',
+        channelName: 'Basic Notifications',
+        channelDescription: 'Channel for basic notifications',
+        enableVibration: true,
+        ledColor: Colors.red,
+        ledOnMs: 1000,
+        ledOffMs: 500,
+        importance: NotificationImportance.Max,
+        playSound: true,
+        defaultRingtoneType: DefaultRingtoneType.Notification,
+        soundSource: 'resource://raw/notification_sound',
+      ),
+      NotificationChannel(
+        channelKey: 'prayer_channel_alfajr',
+        channelName: 'Basic Notifications',
+        channelDescription: 'Channel for basic notifications',
+        enableVibration: true,
+        ledColor: Colors.red,
+        ledOnMs: 1000,
+        ledOffMs: 500,
+        importance: NotificationImportance.Max,
+        playSound: true,
+        defaultRingtoneType: DefaultRingtoneType.Notification,
+        soundSource: 'resource://raw/notification_soundfajr',
+      ),
+    ],
+  );
+
+  // Language ------------------------------------------------------------------
   await MyI18n.loadTranslations();
   var language = await prefs.getString("language");
   Locale local = Locale("en", "US");
@@ -35,15 +61,13 @@ void main() async {
       break;
     default:
   }
-/////////////////////////////////////////////////
+  // ---------------------------------------------------------------------------
+
   runApp(
     I18n(
       initialLocale: local,
       child: ProviderScope(
-        child: MyApp(
-            // theme: theme,
-            // darkTheme: darkTtheme,
-            ),
+        child: MyApp(),
       ),
     ),
   );
@@ -56,12 +80,10 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-// final themeMode = ref.watch(themeModeProvider);
+    ref.read(locationProvider.notifier).fetchLocation();
+
     return MaterialApp.router(
       builder: BotToastInit(),
-      // theme: theme.copyWith(),
-      // darkTheme: darkTheme,
-      //     themeMode: themeMode,
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.white,
         textTheme: TextTheme(

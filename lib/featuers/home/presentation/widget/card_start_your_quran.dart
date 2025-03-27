@@ -39,7 +39,7 @@ class CardStartYourQuran extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        'startYourQuranJourney'.i18n,
+                        'Start Your Quran Journey'.i18n,
                         style: TextStyle(
                           color: Color(0xff124D73),
                           fontSize: 16,

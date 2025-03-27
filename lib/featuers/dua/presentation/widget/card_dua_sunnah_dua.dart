@@ -6,7 +6,7 @@ import 'package:zad_almuslem/core/translations/translation.dart';
 
 
 class CardSunnahDua extends StatelessWidget {
-  CardSunnahDua({super.key});
+  const CardSunnahDua({super.key});
  
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,6 @@ class CardSunnahDua extends StatelessWidget {
             ),
             Positioned(
               right: 0,
-              // bottom: 0,
               child: ClipRRect(
                 borderRadius: BorderRadius.only(topRight: Radius.circular(16)),
                 child: SvgPicture.asset(

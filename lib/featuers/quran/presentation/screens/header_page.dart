@@ -6,7 +6,6 @@ import 'package:zad_almuslem/core/translations/translation.dart';
 
 class HeaderPage extends StatelessWidget {
   const HeaderPage({super.key});
-// bool history
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,7 +45,7 @@ class HeaderPage extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    'StartReading'.i18n,
+                    'Start Reading'.i18n,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -75,13 +74,12 @@ class HeaderPage extends StatelessWidget {
               'assets/images/quranPage/Reading_plan.svg',
               width: 24,
               height: 24,
-              // color: Colors.white,
             ),
             SizedBox(
               width: 12,
             ),
             Text(
-              'Readingplan'.i18n,
+              'Reading plan'.i18n,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,
@@ -90,11 +88,9 @@ class HeaderPage extends StatelessWidget {
             Spacer(),
             InkWell(
               onTap: () {
-                // Navigator.push(
-                    // context, MaterialPageRoute(builder: (_) => StartKhatam()));
               },
               child: Text(
-                'StartKhatam'.i18n,
+                'Start Khatam'.i18n,
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 14,

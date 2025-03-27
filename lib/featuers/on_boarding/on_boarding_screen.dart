@@ -14,26 +14,28 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  final List<Map<String, String>> mapOnBoarding = [
-    {
-      'title': 'title1',
-      'description1': 'description1',
-      'description2': 'description4',
-      'image': 'assets/logo/logo.svg',
-    },
-    {
-      'title': 'title2',
-      'description1': 'description2',
-      'description2': 'description5',
-      'image': 'assets/logo/logo.svg',
-    },
-    {
-      'title': 'title3',
-      'description1': 'description3',
-      'description2': 'description6',
-      'image': 'assets/logo/logo.svg',
-    },
-  ];
+final List<Map<String, String>> mapOnBoarding = [
+  {
+    'title': 'Welcome to Zad Almuslem',
+    'description1': 'Accurate prayer times based on your location,',
+    'description2': 'with precise alerts for every prayer.',
+    'image': 'assets/onboarding/prayer_time.svg',
+  },
+  {
+    'title': 'The Holy Quran at Your Fingertips',
+    'description1': 'Recitation, Tafsir, and reading progress tracking—',
+    'description2': 'everything you need in one digital Mushaf.',
+    'image': 'assets/onboarding/quran_reading.svg',
+  },
+  {
+    'title': 'Glorify, Seek Forgiveness, and Pray',
+    'description1': 'Smart Tasbih counter and a variety of supplications,',
+    'description2': 'making your remembrance of Allah easier and organized.',
+    'image': 'assets/onboarding/zikr_dua.svg',
+  },
+];
+
+
   int _currentPage = 0;
 
   void _onPageChanged(int page) {
@@ -229,7 +231,6 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             Center(
                               child: InkWell(
                                 onTap: () {
-                                  // Get.toNamed(AppRouter.signUp);
                                   context.push('/regester');
                                 },
                                 child: Container(
@@ -254,18 +255,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ],
                       ),
                     ),
-                    // Positioned(
-                    //   right: 0,
-                    //   left: 0,
-                    //   bottom: 30,
-                    //   child: Row(
-                    //     mainAxisSize: MainAxisSize.min,
-                    //     mainAxisAlignment: MainAxisAlignment.center,
-                    //     children: List.generate(mapOnBoarding.length, (index) {
-                    //       return _buildDot(index: index);
-                    //     }),
-                    //   ),
-                    // )
+                  
                   ]);
                 }),
           ),
@@ -282,16 +272,3 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 }
  
-
-// Container(
-//         decoration: BoxDecoration(
-//           borderRadius: BorderRadius.circular(20),
-//           boxShadow: [
-//             BoxShadow(
-//                 color: Colors.black26, blurRadius: 35, offset: Offset(0, 10)),
-//           ],
-//           color: AppColors.mountainMeadow,
-//         ),
-//         width: double.infinity,
-//         height: 339,
-//         child:

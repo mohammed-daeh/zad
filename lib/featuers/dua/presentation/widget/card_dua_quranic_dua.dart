@@ -6,7 +6,7 @@ import 'package:zad_almuslem/core/translations/translation.dart';
 
 
 class CardQuranicDua extends StatelessWidget {
-  CardQuranicDua({super.key});
+  const CardQuranicDua({super.key});
 
   @override
   Widget build(BuildContext context) {

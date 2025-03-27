@@ -21,11 +21,10 @@ class PictureDaytime extends StatelessWidget {
     }
 
     return SizedBox(
-      width: double.infinity, height: 300,
-      // color: Colors.amber,
+      width: double.infinity,
+      height: 300,
       child: SvgPicture.asset(
         imagePath,
-        // height: 400,
         fit: BoxFit.cover,
       ),
     );
